@@ -2,8 +2,9 @@
 
 A real-time collaborative text editor built with React, Firebase, and Quill.js that allows multiple users to edit documents simultaneously and add comments.
 
-![App Screenshot]!
-![App Screenshort] ![Screenshot](https://github.com/user-attachments/assets/6d20ba43-6fa6-461b-a064-bd5fc4a02145)
+![App Screenshot]![SingleUser](https://github.com/user-attachments/assets/1721bcb3-9a00-43b5-a531-7f40584455f9)
+
+![App Screenshort]![MultiUser](https://github.com/user-attachments/assets/440eb29c-6445-434a-91db-5ce7915e70e8)
 
 ## Features
 
