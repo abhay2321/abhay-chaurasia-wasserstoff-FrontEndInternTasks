@@ -5,7 +5,6 @@ A real-time collaborative text editor built with React, Firebase, and Quill.js t
 ![App Screenshot]!
 ![App Screenshort] ![Screenshot](https://github.com/user-attachments/assets/6d20ba43-6fa6-461b-a064-bd5fc4a02145)
 
-
 ## Features
 
 - **Real-time collaboration**: Multiple users can edit the same document simultaneously
@@ -30,36 +29,48 @@ A real-time collaborative text editor built with React, Firebase, and Quill.js t
    ```bash
    git clone https://github.com/your-username/RealTime-TextEditor.git
    cd RealTime-TextEditor
+   ```
 2. Install dependencies:
-    ```bash
+   ```bash
    npm install
-4. Set up Firebase:
-    ```bash
+   ```
+3. Set up Firebase:
+
 - Create a Firebase project at firebase.google.com
 - Copy your Firebase config to src/firebase-config.ts
 - Enable Firestore and Anonymous Authentication in Firebase Console
+
 4. Start the development server:
    ```bash
-  npm run dev
-  
+   npm run dev
+   ```
 
 ## Usage
 
 1. Create or Join a Room:
-  - Enter a room ID to create a new room or join an existing one
-  - Share the room ID with collaborators
+
+- Enter a room ID to create a new room or join an existing one
+- Share the room ID with collaborators
+
 2. Edit the Document:
-  - All changes are saved automatically and synced in real-time
-  - Use the toolbar to format text
+
+- All changes are saved automatically and synced in real-time
+- Use the toolbar to format text
+
 3. Add Comments:
-  - Type your comment in the input field and click "Post" or press Enter
-  - Delete your own comments by clicking the × button
+
+- Type your comment in the input field and click "Post" or press Enter
+- Delete your own comments by clicking the × button
+
 4. Collaborate:
- - See other users' changes as they type
- - All participants see the same content in real-time
+
+- See other users' changes as they type
+- All participants see the same content in real-time
 
 ## Contributing
- Contributions are welcome! Please open an issue or submit a pull request.
+
+Contributions are welcome! Please open an issue or submit a pull request.
 
 ## License
+
 This project is licensed under the MIT License - see the LICENSE file for details.
