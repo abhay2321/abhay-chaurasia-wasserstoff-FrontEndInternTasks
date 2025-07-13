@@ -3,28 +3,29 @@
 /* src/components/Editor.css */
 
 /* Global Styles */
+
 :root {
-  --primary-color: #4285F4;
-  --secondary-color: #34A853;
-  --background-light: #f8f9fa;
-  --border-color: #dadce0;
-  --text-primary: #202124;
-  --text-secondary: #5f6368;
-  --hover-bg: #f1f3f4;
-  --comment-bg: #f8f9fa;
-  --user-highlight: #e8f0fe;
+  --primary-color: #e6708f;
+  --border-color: rgba(255, 255, 255, 0.3);
+  --glass-bg: rgba(255, 255, 255, 0.2);
+  --glass-bg-dark: rgba(0, 0, 0, 0.8);
 }
+
+body {
+  background: rgba(29, 28, 28, 0.666);
+  font-family: "Segoe UI", sans-serif;
+} 
 
 /* Header Styles */
 header {
   text-align: center;
-  font-family: 'Google Sans', Arial, sans-serif;
+  font-family: "Google Sans", Arial, sans-serif;
   color: var(--text-primary);
   padding: 35px 0;
   border-bottom: 1px solid var(--border-color);
   margin-bottom: 0px;
   background-color: rgba(159, 76, 134, 0.368);
-  box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
 }
 
@@ -48,24 +49,24 @@ header p {
   background-color: rgba(57, 51, 55, 0.423);
   padding: 10px 20px;
   margin-bottom: 10px;
-  border-radius: 0px;
-  
+  border-radius: 5px;
+
   & h3 {
-    color: #bf0707;
+    color: #ebedf1;
     margin: 0;
     flex: 1;
     text-align: left;
   }
-  
+
   & h2 {
-    color: #34A853;
+    color: #958f99;
     margin: 0;
     flex: 1;
     text-align: center;
   }
-  
+
   & p {
-    color: #d32f2f;
+    color: #2fbad3;
     margin: 0;
     flex: 1;
     text-align: right;
@@ -77,43 +78,55 @@ header p {
   max-width: 700px;
   margin: 50px auto;
   padding: 20px;
-  background: white;
-  border-radius: 10px;
   margin-top: 150px;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.12);
+  background-color: rgba(205, 49, 49, 0.97);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 20px;
+  border: 1px solid var(--border-color);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  color: #f8f6f6;
+  transition: all 0.3s ease;
 }
 
 .room-form input {
   width: 75%;
   padding: 12px 16px;
   border: 1px solid var(--border-color);
-  border-radius: 4px;
+  border-radius: 8px;
   font-size: 16px;
-  margin-bottom: 25px;
-  transition: border 0.3s;
+  margin-bottom: 20px;
+  background: rgba(255, 255, 255, 0.2);
+  color: #fff;
+  transition: all 0.3s ease;
+}
+
+.room-form input::placeholder {
+  color: rgba(255, 255, 255, 0.6);
 }
 
 .room-form input:focus {
   outline: none;
-  border-color: var(--primary-color);
-  box-shadow: 0 0 0 2px rgba(66,133,244,0.2);
+  /* border-color: var(--primary-color); */
+  box-shadow: 0 0 0 3px rgba(171, 169, 192, 0.374);
+  background: rgba(255, 255, 255, 0.3);
 }
 
 .room-form button {
   width: 65%;
   padding: 12px;
-  background-color: rgb(47, 43, 188);
+  background: linear-gradient(135deg, #f63b3b, #af3f3f);
   color: rgb(236, 234, 234);
   border: none;
-  border-radius: 4px;
+  border-radius: 130px;
   font-size: 16px;
   cursor: pointer;
   transition: background-color 0.3s;
 }
 
 .room-form button:hover {
-  background-color: #3367d6;
-  color: white;
+  background: linear-gradient(135deg, #a42424, #ed1010);
+  box-shadow: 0 6px 20px rgba(59, 130, 246, 0.5);
 }
 
 /* Main editor container */
@@ -127,15 +140,15 @@ header p {
 .text-editor {
   flex: 2;
   min-height: 500px;
-  background-color: rgba(190, 184, 184, 0.374);
+  background-color: rgba(222, 34, 34, 0.622);
   border-radius: 8px;
-  box-shadow: 0 1px 2px rgba(4, 4, 4, 0.1);
+  box-shadow: 0 1px 4px 4px rgba(248, 245, 245, 0.1);
   overflow: hidden;
 }
 
 /* Toolbar styling */
 .ql-toolbar {
-  background-color: rgba(167, 47, 47, 0.403);
+  background-color: rgba(237, 35, 35, 0.523);
 }
 
 .ql-toolbar button {
@@ -149,18 +162,20 @@ header p {
 
 .ql-editor {
   font-size: 14px;
+  font-weight:500;
   line-height: 1.6;
   padding: 20px;
+  color: #f8f6f6;
   min-height: 400px;
 }
 
 /* Comments section */
 .comments-section {
   flex: 1;
-  background-color: rgb(223, 201, 201);
+  background-color: rgba(234, 11, 11, 0.856);
   border-radius: 8px;
   padding: 16px;
-  box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+  box-shadow: 0 1px 2px 4px rgba(244, 241, 241, 0.1);
   max-height: 500px;
   overflow-y: auto;
 }
@@ -172,7 +187,7 @@ header p {
 }
 
 .comment {
-  background-color: var(--comment-bg);
+  background-color: rgba(255, 250, 254, 0.237);
   padding: 12px;
   border-radius: 8px;
   margin-bottom: 12px;
@@ -187,15 +202,17 @@ header p {
 }
 
 .user-id {
-  font-weight: 500;
-  color: var(--primary-color);
+  font-weight: 600;
+  color: #d0cd12;
   font-size: 13px;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 .delete-comment {
   background: none;
   border: none;
-  color: var(--text-secondary);
+  background-color: #efa6a6;
+  color: red;
   cursor: pointer;
   font-size: 18px;
   line-height: 1;
@@ -204,13 +221,14 @@ header p {
 }
 
 .delete-comment:hover {
-  color: #d32f2f;
-  background-color: rgba(211, 47, 47, 0.1);
+  color: #ea0505;
+  background-color: rgba(196, 184, 184, 0.1);
 }
 
 .comment-text {
-  color: var(--text-primary);
+  color: rgb(221, 191, 191);
   font-size: 14px;
+  font-weight: 600;
   line-height: 0.4;
   word-break: break-word;
 }
@@ -224,12 +242,8 @@ header p {
 
 .comment .user-id {
   font-weight: 500;
-  color: var(--primary-color);
+  color: var(--glass-bg-dark);
   margin-right: 6px;
-}
-
-.comment .comment-text {
-  color: var(--text-primary);
 }
 
 .comment-input {
@@ -241,26 +255,27 @@ header p {
 .comment-input input {
   flex: 1;
   padding: 8px 12px;
-  border: 1px solid var(--border-color);
+  border: 2px solid var(--border-color);
   border-radius: 20px;
   font-size: 14px;
   outline: none;
-  box-shadow: 2px 2px 2px; 
+  box-shadow: 2px 2px 2px;
+  background-color: #f4f1f15a;
 }
 
 .comment-input button {
-  background-color: var(--primary-color);
+   background-color: var(--primary-color); 
   color: white;
   border: none;
   border-radius: 20px;
   padding: 8px 16px;
   cursor: pointer;
   font-size: 14px;
-  box-shadow: 2px 2px 2px; 
+  box-shadow: 2px 2px 2px;
 }
 
 .comment-input button:hover {
-  background-color: #3367d6;
+  background-color: #c9bbbb58;
 }
 
 /* Responsive adjustments */
@@ -270,42 +285,41 @@ header p {
   }
 
   .ql-toolbar button {
-  margin: 0 5px;
-}
-  
+    margin: 0px;
+
+  }
+
   .comments-section {
     max-height: 300px;
   }
 
   .head {
-  display: flex;
-  flex-direction: column;
-  background-color: rgba(160, 99, 151, 0.585);
-  padding: 9px;
-  position: relative;
-  min-height: 45px;
-  
-  & h3 {
-    margin: 0;
-    position: absolute;
-    bottom: 8px;
-    left: 12px;
-  }
-  
-  & h2 {
-    /* margin: 0 0 -10px 0; */
-     position: absolute;
-    bottom: 28px;
-  
-  }
-  
-  & p {
-    margin: 0;
-    position: absolute;
-    bottom: 8px;
-    right: 12px;
-  }
-}
+    display: flex;
+    flex-direction: column;
+    /* background-color: rgba(231, 25, 25, 0.712); */
+    background: rgba(247, 17, 17, 0.692);
+    padding: 9px;
+    position: relative;
+    min-height: 45px;
 
-  
+    & h3 {
+      margin: 0;
+      position: absolute;
+      bottom: 8px;
+      left: 12px;
+    }
+
+    & h2 {
+      /* margin: 0 0 -10px 0; */
+      position: absolute;
+      bottom: 28px;
+    }
+
+    & p {
+      margin: 0;
+      position: absolute;
+      bottom: 8px;
+      right: 12px;
+    }
+  }
 }

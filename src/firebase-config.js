@@ -1,6 +1,6 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
-import { getAuth } from "firebase/auth/cordova";
+import { getAuth } from "firebase/auth";
 import { getFirestore } from "firebase/firestore";
 
 // TODO: Add SDKs for Firebase products that you want to use
@@ -11,7 +11,8 @@ const firebaseConfig = {
   apiKey: "AIzaSyDhrZhXJLYHeVt8XH-tHmYX9O4dWrXAlns",
   authDomain: "real-time-collaborative.firebaseapp.com",
   projectId: "real-time-collaborative",
-  storageBucket: "real-time-collaborative.firebasestorage.app",
+  // storageBucket: "real-time-collaborative.firebasestorage.app",
+  storageBucket: "real-time-collaborative.appspot.com",
   messagingSenderId: "350778417291",
   appId: "1:350778417291:web:77bf6817df809d1db0b48e"
 };
